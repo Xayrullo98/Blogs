@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farg'ona Smarqand taxi</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="{% static './assets/images/favicon.ico' %}" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="{% static './assets/css/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header>
+
+    <div class="container">
+
+      <nav class="navbar">
+
+        <a href="#">
+          <img src="{% static './assets/images/rasm.jpg' %}" alt="Devblog's logo" width="50" height="50" class="logo-light">
+          <img src="{% static './assets/images/rasm.jpg' %}" alt="Devblog's logo" width="50" height="50" class="logo-dark">
+        </a>
+
+        <div class="btn-group">
+
+          <button class="theme-btn theme-btn-mobile light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+          <button class="nav-menu-btn">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="flex-wrapper">
+
+          <ul class="desktop-nav">
+
+            <li>
+              <a href="{% url 'index' %}" class="nav-link">Asosiy</a>
+            </li>
+
+            <!-- <li>
+              <a href="#" class="nav-link">About Me</a>
+            </li> -->
+
+            <li>
+              <a href="tel:+998903955954" class="nav-link">Bog'lanish</a>
+            </li>
+
+          </ul>
+
+          <button class="theme-btn theme-btn-desktop light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="mobile-nav">
+
+          <button class="nav-close-btn">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="wrapper">
+
+            <p class="h3 nav-title">Main Menu</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="{% url 'index' %}" class="nav-link">Asosiy</a>
+              </li>
+
+              <!-- <li class="nav-item">
+                <a href="#" class="nav-link">About Me</a>
+              </li> -->
+
+              <li class="nav-item">
+                <a href="tel:+998903955954" class="nav-link">Bog'lanish</a>
+              </li>
+            </ul>
+
+          </div>
+
+          
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+
+    <!--
+      - #HERO SECTION
+    -->
+
+    <div class="hero">
+
+      <div class="container">
+
+        <div class="left">
+
+          <h1 class="h1">
+            <b>Farg'ona Samarqand taxi</b>
+             <br>Buyurtma berish uchun tugmani tanlang !!!
+          </h1>
+     <div class="links" >
+        <div class="link">
+            <div class="link_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M160 64c0-8.8 7.2-16 16-16s16 7.2 16 16V200c0 10.3 6.6 19.5 16.4 22.8s20.6-.1 26.8-8.3c3-3.9 7.6-6.4 12.8-6.4c8.8 0 16 7.2 16 16c0 10.3 6.6 19.5 16.4 22.8s20.6-.1 26.8-8.3c3-3.9 7.6-6.4 12.8-6.4c7.8 0 14.3 5.6 15.7 13c1.6 8.2 7.3 15.1 15.1 18s16.7 1.6 23.3-3.6c2.7-2.1 6.1-3.4 9.9-3.4c8.8 0 16 7.2 16 16l0 16V392c0 39.8-32.2 72-72 72H272 212.3h-.9c-37.4 0-72.4-18.7-93.2-49.9L50.7 312.9c-4.9-7.4-2.9-17.3 4.4-22.2s17.3-2.9 22.2 4.4L116 353.2c5.9 8.8 16.8 12.7 26.9 9.7s17-12.4 17-23V320 64zM176 0c-35.3 0-64 28.7-64 64V261.7C91.2 238 55.5 232.8 28.5 250.7C-.9 270.4-8.9 310.1 10.8 339.5L78.3 440.8c29.7 44.5 79.6 71.2 133.1 71.2h.9H272h56c66.3 0 120-53.7 120-120V288l0-16c0-35.3-28.7-64-64-64c-4.5 0-8.8 .5-13 1.3c-11.7-15.4-30.2-25.3-51-25.3c-6.9 0-13.5 1.1-19.7 3.1C288.7 170.7 269.6 160 248 160c-2.7 0-5.4 .2-8 .5V64c0-35.3-28.7-64-64-64zm48 304c0-8.8-7.2-16-16-16s-16 7.2-16 16v96c0 8.8 7.2 16 16 16s16-7.2 16-16V304zm48-16c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16s16-7.2 16-16V304c0-8.8-7.2-16-16-16zm80 16c0-8.8-7.2-16-16-16s-16 7.2-16 16v96c0 8.8 7.2 16 16 16s16-7.2 16-16V304z"/></svg>
+            </div>
+            <a href="https://t.me/FARGONA_SAMARQAND_TAKSI">
+                Farg'ona Samarqand
+            </a>
+        </div>
+        <div class="link">
+            <div class="link_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><path d="M160 64c0-8.8 7.2-16 16-16s16 7.2 16 16V200c0 10.3 6.6 19.5 16.4 22.8s20.6-.1 26.8-8.3c3-3.9 7.6-6.4 12.8-6.4c8.8 0 16 7.2 16 16c0 10.3 6.6 19.5 16.4 22.8s20.6-.1 26.8-8.3c3-3.9 7.6-6.4 12.8-6.4c7.8 0 14.3 5.6 15.7 13c1.6 8.2 7.3 15.1 15.1 18s16.7 1.6 23.3-3.6c2.7-2.1 6.1-3.4 9.9-3.4c8.8 0 16 7.2 16 16l0 16V392c0 39.8-32.2 72-72 72H272 212.3h-.9c-37.4 0-72.4-18.7-93.2-49.9L50.7 312.9c-4.9-7.4-2.9-17.3 4.4-22.2s17.3-2.9 22.2 4.4L116 353.2c5.9 8.8 16.8 12.7 26.9 9.7s17-12.4 17-23V320 64zM176 0c-35.3 0-64 28.7-64 64V261.7C91.2 238 55.5 232.8 28.5 250.7C-.9 270.4-8.9 310.1 10.8 339.5L78.3 440.8c29.7 44.5 79.6 71.2 133.1 71.2h.9H272h56c66.3 0 120-53.7 120-120V288l0-16c0-35.3-28.7-64-64-64c-4.5 0-8.8 .5-13 1.3c-11.7-15.4-30.2-25.3-51-25.3c-6.9 0-13.5 1.1-19.7 3.1C288.7 170.7 269.6 160 248 160c-2.7 0-5.4 .2-8 .5V64c0-35.3-28.7-64-64-64zm48 304c0-8.8-7.2-16-16-16s-16 7.2-16 16v96c0 8.8 7.2 16 16 16s16-7.2 16-16V304zm48-16c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16s16-7.2 16-16V304c0-8.8-7.2-16-16-16zm80 16c0-8.8-7.2-16-16-16s-16 7.2-16 16v96c0 8.8 7.2 16 16 16s16-7.2 16-16V304z"/></svg>
+            </div>
+            <a href="https://t.me/SAMARQANDFARGONAtaksi">
+                Samarqand Farg'ona
+            </a>
+        </div>
+    </div>
+
+
+          </div>
+
+
+        </div>
+
+        <!-- <div class="right">
+
+          <div class="pattern-bg"></div>
+          <div class="img-box">
+            <img src="./assets/images/hero.png" alt="Julia Walker" class="hero-img">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+          </div>
+
+        </div> -->
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="main">
+
+      <div class="container">
+
+        <!--
+          - BLOG SECTION
+        -->
+
+        <div class="blog">
+
+          <h2 class="h2">
+            Bizning haydovchilar</h2>
+
+          <div class="blog-card-group">
+            {% for driver in drivers %}
+              <div class="blog-card">
+
+              <div class="blog-card-banner">
+                <img src="{{ driver.mashina_rasm.url }}" alt="Picture"
+                   class="blog-banner-img" style="width:100%" >
+              </div>
+
+              <div class="blog-content-wrapper">
+
+                <button class="blog-topic text-tiny">{{driver.modeli}}</button>
+
+                <h3>
+                  <a href="#" class="h3">
+                    {{driver.ism}}
+                    {{driver.familya}}
+                  </a>
+                </h3>
+
+
+
+                <div class="wrapper-flex">
+
+                         <img class="profile-wrapper" src="{{driver.hodim_rasm.url}}" alt="Julia Walker" >
+
+
+                  <div class="wrapper">
+                    <a href="tel: {{driver.tel}}" class="h4">{{driver.tel}}</a>
+
+                    <p class="text-sm">
+                      <a href="{{driver.telegram_link}}">{{driver.telegram_link}}</a>
+                      <span class="separator"></span>
+
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+            {% endfor %}
+
+
+
+
+
+
+
+
+
+
+<!--          <div class="tags">-->
+
+<!--            <h2 class="h2">Teglar</h2>-->
+
+<!--            <div class="wrapper">-->
+
+<!--              <button class="hashtag active">#mongodb</button>-->
+<!--              <button class="hashtag">#nodejs</button>-->
+<!--              <button class="hashtag">#a11y</button>-->
+<!--              <button class="hashtag">#mobility</button>-->
+<!--              <button class="hashtag">#inclusion</button>-->
+<!--              <button class="hashtag">#webperf</button>-->
+<!--              <button class="hashtag">#optimize</button>-->
+<!--              <button class="hashtag">#performance</button>-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+
+        
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+
+
+  <!--
+    - #FOOTER
+  -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="wrapper">
+
+        <a href="#" class="footer-logo">
+          <img src="{% static './assets/images/rasm.jpg' %}" alt="DevBlog's Logo" width="150" height="150" class="logo-light">
+          <img src="{% static './assets/images/rasm.jpg' %}" alt="DevBlog's Logo" width="150" height="150" class="logo-dark">
+        </a>
+
+
+      </div>
+       <ul class="social-link">
+
+                <li>
+                  <a href="https://t.me/FARGONA_SAMARQAND_TAKSI" class="icon-box discord">
+                    <i class="fa-brands fa-telegram "></i>
+                    <p style="margin-bottom:0; margin-left:6px">Farg'ona Samarqand taxi</p>
+
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://t.me/SAMARQANDFARGONAtaksi" class="icon-box twitter">
+                    <i class="fa-brands fa-telegram"></i>
+                             <p style="margin-bottom:0; margin-left:6px">Samarqand Farg'ona taxi</p>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="fargonasamarqand.uz" class="icon-box facebook">
+                    <i class="fa-brands fa-google"></i>
+                             <p style="margin-bottom:0; margin-left:6px">Google</p>
+                  </a>
+                </li>
+
+              </ul>
+    
+
+    </div>
+
+    <p class="copyright">
+      &copy; Website 2023 <a href="#">Dasturchi</a>
+    </p>
+
+  </footer>
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="{% static './assets/js/script.min.js' %}"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
